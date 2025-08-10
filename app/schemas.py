@@ -145,3 +145,6 @@ class SignupRequest(BaseModel):
     password: str
     password_check: str
     user_type: UserTypeEnum
+
+class DeviceTokenUpdate(BaseModel):
+    token: str
