@@ -154,3 +154,4 @@ class LogoutRequest(BaseModel):
     user_type: UserTypeEnum
     user_id: Optional[int] = None
     guardian_id: Optional[int] = None
+
