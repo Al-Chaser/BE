@@ -4,6 +4,7 @@ from google.oauth2 import service_account
 import google.auth.transport.requests
 
 def send_fcm_v1(token: str, title: str, body: str):
+
     service_account_path = "app/service_account.json"
 
     # 서비스 계정으로 인증
@@ -15,7 +16,7 @@ def send_fcm_v1(token: str, title: str, body: str):
     credentials.refresh(request)
 
     access_token = credentials.token
-  
+
     project_id = credentials.project_id
     url = f"https://fcm.googleapis.com/v1/projects/{project_id}/messages:send"
 
